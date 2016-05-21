@@ -1,0 +1,292 @@
+Installed:
+  puppet.noarch 0:3.6.2-1.el7sat
+
+Dependency Installed:
+  augeas-libs.x86_64 0:1.4.0-2.el7                 facter.x86_64 1:1.7.6-2.1.el7sat
+  hiera.noarch 0:1.3.1-2.el7                       libselinux-ruby.x86_64 0:2.2.2-6.el7
+  pciutils.x86_64 0:3.2.1-4.el7                    ruby.x86_64 0:2.0.0.598-25.el7_1
+  ruby-augeas.x86_64 0:0.5.0-1.el7                 ruby-irb.noarch 0:2.0.0.598-25.el7_1
+  ruby-libs.x86_64 0:2.0.0.598-25.el7_1            ruby-rgen.noarch 0:0.6.5-2.el7sat
+  ruby-shadow.x86_64 0:1.4.1-21.el7                rubygem-bigdecimal.x86_64 0:1.2.0-25.el7_1
+  rubygem-io-console.x86_64 0:0.4.2-25.el7_1       rubygem-json.x86_64 0:1.7.7-25.el7_1
+  rubygem-psych.x86_64 0:2.0.0-25.el7_1            rubygem-rdoc.noarch 0:4.0.0-25.el7_1
+  rubygems.noarch 0:2.0.14-25.el7_1
+
+Complete!
+[root@ip-172-31-38-73 DEVOPS]# cd /etc/puppet
+[root@ip-172-31-38-73 puppet]# ls
+auth.conf  modules  puppet.conf
+[root@ip-172-31-38-73 puppet]# cd modules
+[root@ip-172-31-38-73 modules]# ls
+[root@ip-172-31-38-73 modules]# mkdir softwares
+[root@ip-172-31-38-73 modules]# mkdir roles
+[root@ip-172-31-38-73 modules]# cd software
+-bash: cd: software: No such file or directory
+[root@ip-172-31-38-73 modules]# cd softwares
+[root@ip-172-31-38-73 softwares]# mkdir manifests
+[root@ip-172-31-38-73 softwares]# cd manifests
+[root@ip-172-31-38-73 manifests]# pwd
+/etc/puppet/modules/softwares/manifests
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]# touch java.pp
+[root@ip-172-31-38-73 manifests]# touch mysql.pp
+[root@ip-172-31-38-73 manifests]# touch activemq.pp
+[root@ip-172-31-38-73 manifests]# touch nexus.pp
+[root@ip-172-31-38-73 manifests]# touch docker.pp
+[root@ip-172-31-38-73 manifests]# touch vagrant.pp
+[root@ip-172-31-38-73 manifests]# touch jenkins.pp
+[root@ip-172-31-38-73 manifests]# touch nagios.pp
+[root@ip-172-31-38-73 manifests]# touch git.pp
+[root@ip-172-31-38-73 manifests]# touch jira.pp
+[root@ip-172-31-38-73 manifests]# ls
+activemq.pp  git.pp   jenkins.pp  mysql.pp   nexus.pp
+docker.pp    java.pp  jira.pp     nagios.pp  vagrant.pp
+[root@ip-172-31-38-73 manifests]# ls -
+ls: cannot access -: No such file or directory
+[root@ip-172-31-38-73 manifests]# ls -l
+total 0
+-rw-r--r--. 1 root root 0 May 21 00:22 activemq.pp
+-rw-r--r--. 1 root root 0 May 21 00:22 docker.pp
+-rw-r--r--. 1 root root 0 May 21 00:23 git.pp
+-rw-r--r--. 1 root root 0 May 21 00:22 java.pp
+-rw-r--r--. 1 root root 0 May 21 00:22 jenkins.pp
+-rw-r--r--. 1 root root 0 May 21 00:23 jira.pp
+-rw-r--r--. 1 root root 0 May 21 00:22 mysql.pp
+-rw-r--r--. 1 root root 0 May 21 00:22 nagios.pp
+-rw-r--r--. 1 root root 0 May 21 00:22 nexus.pp
+-rw-r--r--. 1 root root 0 May 21 00:22 vagrant.pp
+[root@ip-172-31-38-73 manifests]# cd ..
+[root@ip-172-31-38-73 softwares]# cd ..
+[root@ip-172-31-38-73 modules]# ls
+roles  softwares
+[root@ip-172-31-38-73 modules]# cd roles
+[root@ip-172-31-38-73 roles]# touch db.pp
+[root@ip-172-31-38-73 roles]# touch as.pp
+[root@ip-172-31-38-73 roles]# touch mq.pp
+[root@ip-172-31-38-73 roles]# touch scm.pp
+[root@ip-172-31-38-73 roles]# mkdir manifests
+[root@ip-172-31-38-73 roles]# ls
+as.pp  db.pp  manifests  mq.pp  scm.pp
+[root@ip-172-31-38-73 roles]# mv * /etc/puppet/modules/roles/manifests
+mv: cannot move ‘manifests’ to a subdirectory of itself, ‘/etc/puppet/modules/roles/manifests/manifests’
+[root@ip-172-31-38-73 roles]# mv ./ /etc/puppet/modules/roles/manifests
+mv: overwrite ‘/etc/puppet/modules/roles/manifests/.’? yes
+mv: cannot move ‘./’ to ‘/etc/puppet/modules/roles/manifests/.’: Device or resource busy
+[root@ip-172-31-38-73 roles]# cd /
+[root@ip-172-31-38-73 /]# mv /etc/puppet/modules/roles/* /etc/puppet/modules/roles/manifests
+mv: cannot move ‘/etc/puppet/modules/roles/manifests’ to a subdirectory of itself, ‘/etc/puppet/modules/roles/manifests/manifests’
+[root@ip-172-31-38-73 /]# mv /etc/puppet/modules/roles/*.pp /etc/puppet/modules/roles/manifests
+mv: cannot stat ‘/etc/puppet/modules/roles/*.pp’: No such file or directory
+[root@ip-172-31-38-73 /]# mv /etc/puppet/modules/roles/*pp /etc/puppet/modules/roles/manifests
+mv: cannot stat ‘/etc/puppet/modules/roles/*pp’: No such file or directory
+[root@ip-172-31-38-73 /]# mv /etc/puppet/modules/roles/*.*pp /etc/puppet/modules/roles/manifests
+mv: cannot stat ‘/etc/puppet/modules/roles/*.*pp’: No such file or directory
+[root@ip-172-31-38-73 /]# mv -rf /etc/puppet/modules/roles/ /etc/puppet/modules/roles/manifests
+mv: invalid option -- 'r'
+Try 'mv --help' for more information.
+[root@ip-172-31-38-73 /]# mv /etc/puppet/modules/roles/ -rf /etc/puppet/modules/roles/manifests
+mv: invalid option -- 'r'
+Try 'mv --help' for more information.
+[root@ip-172-31-38-73 /]# cd /etc/puppet/modules
+[root@ip-172-31-38-73 modules]# ls
+roles  softwares
+[root@ip-172-31-38-73 modules]# cd roles
+[root@ip-172-31-38-73 roles]# ls
+manifests
+[root@ip-172-31-38-73 roles]# pwd
+/etc/puppet/modules/roles
+[root@ip-172-31-38-73 roles]# rm -rf *
+[root@ip-172-31-38-73 roles]# mkdir manifests
+[root@ip-172-31-38-73 roles]# cd manifests
+[root@ip-172-31-38-73 manifests]# touch db.pp
+[root@ip-172-31-38-73 manifests]# touch as.pp
+[root@ip-172-31-38-73 manifests]# touch mq.pp
+[root@ip-172-31-38-73 manifests]# touch vagrant.pp
+[root@ip-172-31-38-73 manifests]# touch scm.pp
+[root@ip-172-31-38-73 manifests]# touch build.pp
+[root@ip-172-31-38-73 manifests]# cd ..
+[root@ip-172-31-38-73 roles]# cd ..
+[root@ip-172-31-38-73 modules]# cd ..
+[root@ip-172-31-38-73 puppet]# cd manifests
+-bash: cd: manifests: No such file or directory
+[root@ip-172-31-38-73 puppet]# ls
+auth.conf  modules  puppet.conf
+[root@ip-172-31-38-73 puppet]# mkdir manifests
+[root@ip-172-31-38-73 puppet]# ls
+auth.conf  manifests  modules  puppet.conf
+[root@ip-172-31-38-73 puppet]# cd manifests
+[root@ip-172-31-38-73 manifests]# ls
+[root@ip-172-31-38-73 manifests]# vi updatefile
+[root@ip-172-31-38-73 manifests]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+[root@ip-172-31-38-73 manifests]# ls -l
+total 4
+-rw-r--r--. 1 root root 98 May 21 00:52 updatefile
+[root@ip-172-31-38-73 manifests]# mv updatefile updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:6 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:6 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Could not parse for environment production: Syntax error at '='; expected '}' at /etc/puppet/manifests/updatefile.pp:4 on node ip-172-31-38-73.us-west-2.compute.internal
+Error: Could not parse for environment production: Syntax error at '='; expected '}' at /etc/puppet/manifests/updatefile.pp:4 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:7 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:7 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# puppet --version
+3.6.2
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:7 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:7 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:6 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:6 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:6 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:6 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:7 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:7 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# cd ..
+[root@ip-172-31-38-73 puppet]# cd mdoules
+-bash: cd: mdoules: No such file or directory
+[root@ip-172-31-38-73 puppet]# cd manifests
+[root@ip-172-31-38-73 manifests]# ls
+updatefile.pp
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Notice: Compiled catalog for ip-172-31-38-73.us-west-2.compute.internal in environment production in 0.11 seconds
+Info: Applying configuration version '1463807349'
+Notice: /Stage[main]/Main/Node[default]/File[test_file]/ensure: created
+Info: Creating state file /var/lib/puppet/state/state.yaml
+Notice: Finished catalog run in 0.02 seconds
+[root@ip-172-31-38-73 manifests]# ls
+test  updatefile.pp
+[root@ip-172-31-38-73 manifests]# cd test
+-bash: cd: test: Not a directory
+[root@ip-172-31-38-73 manifests]# ls
+test  updatefile.pp
+[root@ip-172-31-38-73 manifests]# cat text
+cat: text: No such file or directory
+[root@ip-172-31-38-73 manifests]# cat text
+cat: text: No such file or directory
+[root@ip-172-31-38-73 manifests]# cat test
+this is the test[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:13 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:13 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Could not parse for environment production: Unclosed quote after '' in ',
+
+}
+}
+' at /etc/puppet/manifests/updatefile.pp:11 on node ip-172-31-38-73.us-west-2.compute.internal
+Error: Could not parse for environment production: Unclosed quote after '' in ',
+
+}
+}
+' at /etc/puppet/manifests/updatefile.pp:11 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:13 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:13 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v updatefile.pp
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:14 on node ip-172-31-38-73.us-west-2.compute.internal
+Wrapped exception:
+Invalid resource type file_line
+Error: Puppet::Parser::AST::Resource failed with error ArgumentError: Invalid resource type file_line at /etc/puppet/manifests/updatefile.pp:14 on node ip-172-31-38-73.us-west-2.compute.internal
+[root@ip-172-31-38-73 manifests]# vi updatefile.pp
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]# vi order.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v order.pp
+Notice: Compiled catalog for ip-172-31-38-73.us-west-2.compute.internal in environment production in 0.11 seconds
+Info: Applying configuration version '1463808585'
+Error: Could not set 'file' on ensure: No such file or directory - /root/test/demo20160521-22056-10rw35n at 5:/etc/puppet/manifests/order.pp
+Error: Could not set 'file' on ensure: No such file or directory - /root/test/demo20160521-22056-10rw35n at 5:/etc/puppet/manifests/order.pp
+Wrapped exception:
+No such file or directory - /root/test/demo20160521-22056-10rw35n
+Error: /Stage[main]/Main/Node[default]/File[createfile]/ensure: change from absent to file failed: Could not set 'file' on ensure: No such file or directory - /root/test/demo20160521-22056-10rw35n at 5:/etc/puppet/manifests/order.pp
+Notice: Finished catalog run in 0.02 seconds
+[root@ip-172-31-38-73 manifests]# vi order.pp
+[root@ip-172-31-38-73 manifests]# ld
+ld: no input files
+[root@ip-172-31-38-73 manifests]# ls
+order.pp  test  updatefile.pp
+[root@ip-172-31-38-73 manifests]# vi order.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v order.pp
+Notice: Compiled catalog for ip-172-31-38-73.us-west-2.compute.internal in environment production in 0.10 seconds
+Info: Applying configuration version '1463808688'
+Error: Could not set 'file' on ensure: No such file or directory - /root/test/demo20160521-22181-jetx8s at 6:/etc/puppet/manifests/order.pp
+Error: Could not set 'file' on ensure: No such file or directory - /root/test/demo20160521-22181-jetx8s at 6:/etc/puppet/manifests/order.pp
+Wrapped exception:
+No such file or directory - /root/test/demo20160521-22181-jetx8s
+Error: /Stage[main]/Main/Node[default]/File[createfile]/ensure: change from absent to file failed: Could not set 'file' on ensure: No such file or directory - /root/test/demo20160521-22181-jetx8s at 6:/etc/puppet/manifests/order.pp
+Notice: Finished catalog run in 0.04 seconds
+[root@ip-172-31-38-73 manifests]# vi order.pp
+[root@ip-172-31-38-73 manifests]# puppet apply -v order.pp
+Notice: Compiled catalog for ip-172-31-38-73.us-west-2.compute.internal in environment production in 0.12 seconds
+Info: Applying configuration version '1463808742'
+Notice: /Stage[main]/Main/Node[default]/File[test]/ensure: created
+Notice: /Stage[main]/Main/Node[default]/File[createfile]/ensure: defined content as '{md5}e9b6089cea3f1bb37b63c8d3d8165ac5'
+Notice: Finished catalog run in 0.03 seconds
+[root@ip-172-31-38-73 manifests]# ls
+order.pp  test  updatefile.pp
+[root@ip-172-31-38-73 manifests]# cat order.pp
+node default {
+file {'createfile':
+path => "/root/test/demo",
+content => "testingorder",
+require => File['test'],
+}
+file {'test':
+ensure => directory,
+path => "/root/test",
+}
+}
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]#
+[root@ip-172-31-38-73 manifests]# 8-73 manifests]#
+-bash: 8-73: command not found
+[root@ip-172-31-38-73 manifests]# [root@ip-172-31-38-73 manifests]#
+-bash: [root@ip-172-31-38-73: command not found
+[root@ip-172-31-38-73 manifests]# [root@ip-172-31-38-73 manifests]#
+-bash: [root@ip-172-31-38-73: command not found
+[root@ip-172-31-38-73 manifests]# [root@ip-172-31-38-73 manifests]#
+-bash: [root@ip-172-31-38-73: command not found
+[root@ip-172-31-38-73 manifests]#
